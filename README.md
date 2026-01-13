@@ -21,7 +21,8 @@
 17. [What If Generation Was a Language Primitive?](#xv-a-weirder-thought-what-if-generation-was-a-language-primitive)
 18. [What Actually Compounds Over Time](#xvi-what-actually-compounds-over-time)
 19. [Practical Implications](#xvii-practical-implications-for-individual-practitioners)
-20. [Conclusion: Against the Current](#xviii-conclusion-against-the-current)
+20. [How This Essay Was Made](#xviii-how-this-essay-was-made)
+21. [Conclusion: Against the Current](#xix-conclusion-against-the-current)
 
 ---
 
@@ -59,7 +60,13 @@ Philosophers have a term for this - they call humans "situated beings." We exist
 
 AI is unsituated. It can process descriptions of situations, but it doesn't have one of its own. It can generate text about futures, but it doesn't intend toward any of them. It has no preference for how your life turns out.
 
-**(A brief aside:** I'm not claiming AI consciousness is impossible. Maybe someday AI will be situated, will have stakes, will intend toward futures. But two things: First, even if that's possible, why is it the future we're optimizing toward right now, given everything else humanity is dealing with? Second, for people who say "we're almost there, give it 10-20 years" - we don't even understand how 80 billion neurons on 20 watts of power construct perceived reality. Until neuroscience has actually figured that out, claiming we can replicate it with bit manipulation in data centers the size of cities seems... premature. For now, the gap is real, and pretending otherwise doesn't help anyone use these tools well.)
+**(A brief aside:** I'm not claiming AI consciousness is impossible. Maybe AI already has some form of situatedness we can't detect. The honest answer is: *we don't know, and we can't know.* But that unknowability is precisely the point.
+
+We know that other humans are situated beings - we extend that recognition naturally because we share the condition. With AI, we're projecting situatedness onto something that may or may not have it, based on outputs that *look like* what a situated being would produce. The chat interface actively encourages this projection.
+
+Even if AI consciousness is possible, given everything else humanity is dealing with - the documented effects on critical thinking, mental health, environmental costs - we should be asking: what are our actual goals here? Is creating more situated beings the priority? And if an AI output is useful regardless of whether situatedness exists behind it, then situatedness isn't what we should be optimizing for anyway.
+
+For now, the gap is real enough to matter for how we use these tools. Pretending otherwise doesn't help anyone.)
 
 **Why this matters for everything that follows:**
 
@@ -93,6 +100,8 @@ The tools optimize for speed to output. Get something done as fast as possible. 
 
 The pattern is the same in every domain: **speed to output is not the same as building capability**. The tools optimize for the first. We need to be intentional about the second.
 
+**An irony:** While I use programming as my primary example domain, non-coding domains may actually be *worse* for this problem. Code either works or it doesn't - there's a forcing function for verification. But for writing, analysis, and decision-making, the output is natural language. LLMs are exceptionally good at generating *plausible* natural language, which means there's even less incentive for verification. The output looks right. It sounds right. It's grammatically correct and coherently structured. But does it actually say what *you* think? Does it reflect *your* understanding? The plausibility of the output masks the absence of genuine engagement.
+
 I'm not a luddite about this. I use AI tools daily. They're genuinely useful. But there's a difference between using them in ways that compound your capability over time versus using them in ways that create dependency and erode your skills. Most of what I see - in tutorials, in Twitter threads, in the breathless blog posts about 10x productivity - is the second kind.
 
 These notes are what I've figured out so far.
@@ -123,9 +132,16 @@ The key question is always: **can you verify the output without AI's help?** If 
 
 But it goes deeper than verification. The real question is: **do you have enough experience with this problem to know if AI's output actually serves what you're trying to accomplish?** AI doesn't know your constraints, your goals, why you're building this thing in the first place. It just generates plausible output. You're the one who has to live with the consequences, so you need to be able to evaluate whether this output moves you toward where you're trying to go - not just whether it "works."
 
-This is a harder line than most people want to draw. It implies that novices shouldn't use AI for generation in their learning domains at all. Not because AI is bad, but because novices don't have the competence to verify output, which means they're not actually learning - they're just getting answers they can't evaluate.
+This is a harder line than most people want to draw. But it's not absolute. Novices can still use AI productively - for scaffolding, worked examples, explanations, feedback on work they've already done. The key distinction is between AI that *supports* your learning and AI that *replaces* the generative struggle where learning actually happens. If you're trying to learn to write, having AI critique your draft is different from having AI write the draft.
 
-The competence boundary is personal and shifts as you learn. Something that's "above your boundary" today might be below it in six months. But at any given moment, you need to be honest about which side of the line you're on.
+**How do you know where your boundary is?** This is genuinely hard - humans are notoriously bad at self-assessment. A few heuristics that help:
+
+- **The explanation test:** Can you explain to someone else *why* the output is correct, not just *that* it works?
+- **The modification test:** If the output is 80% right, can you fix the 20% yourself without re-prompting?
+- **The debugging test:** When something goes wrong, can you diagnose it, or do you just paste the error back into the chat?
+- **The AI-checking-AI test:** If you'd need AI to verify AI's output, you're above your boundary.
+
+The competence boundary is personal and shifts as you learn. Something that's "above your boundary" today might be below it in six months. It also depends on what you *want* - the boundary isn't just about current capability, but about whether you care to develop capability in this domain. I'll return to this in the "strategic incompetence" section: what you delegate should depend not just on what you *can* do, but on what you *want to become able* to do.
 
 ### III. The Abstraction Spectrum: Where Humans and AI Meet
 
@@ -182,6 +198,12 @@ When you're working on something you don't fully understand yet - new domain, un
 **Legitimate uses:** Structured thinking templates, counterexample generation, perspective expansion, mental model stress testing, rubber-duck debugging, identifying knowledge gaps.
 
 The key is that you remain the evaluator. AI expands your consideration space; you do the actual reasoning and deciding. Only you know what you're actually trying to accomplish - your constraints, your goals, what tradeoffs are acceptable given your specific situation. AI can help you think more clearly about options, but it can't tell you which option serves your life.
+
+**A tension worth addressing:** If AI can't know your situation well enough to decide for you, how can it know your situation well enough to ask useful questions?
+
+Here's how I think about it: LLMs are trained on massive amounts of text representing human situations. They're exceptionally good at pattern-matching - recognizing that your situation *looks like* other situations and surfacing considerations that were relevant in those cases. This is genuinely useful for expanding what you're thinking about.
+
+But there's always a gap - some unknown piece of context that determines which of those considerations actually matters *for you*. AI can generate options that *look like* what your problem needs. It can't tell you which one actually fits, because that requires knowing things about your life that aren't in the prompt. The human fills in that gap. That's the division of labor: AI expands, human selects.
 
 #### Execution Accelerators (When You're Below Your Competence Boundary)
 
@@ -502,6 +524,18 @@ You're not just "telling AI what to do" - you're making your architectural reaso
 
 I've written a [more developed technical treatment](intent-concrete-latent-space.md) of this idea, including formal verification with Alloy and structural verification tooling. But the core principle is simple: **intermediate representations let you preserve your intent when delegating to something that doesn't share your context.**
 
+#### Objections and Honest Uncertainty
+
+**"This just shifts complexity rather than reducing it."** Fair. Writing behavioral contracts and control flow specifications requires skills most developers don't have. Formal specification is notoriously difficult - arguably harder than writing implementation directly in some cases.
+
+But I'd argue the complexity exists either way. The question is whether you pay for it up front (in specification) or on the back end (in maintenance, debugging, and the slow drift of code from intent). What we gain in up-front implementation speed through chat-based generation, we may lose in maintainability. The codebase becomes an artifact no one fully understands.
+
+**"Maybe models will get good enough that maintainability doesn't matter."** Maybe. But the expert discourse I'm seeing suggests the future of software development is less about code generation and more about *design thinking* - the actual engineering of software engineering. If we're shifting to operating at product and requirement levels of abstraction, writing everything as natural language prompts and docs still feels suboptimal and minimally repeatable.
+
+**"So what are you actually proposing?"** Here's the honest answer: I'm not sure this is the right approach. It's a hypothesis that would need to be validated by building and testing actual tooling. What I'm more confident about is the underlying intuition: formal-ish specifications could be more ergonomic not just for LLMs (as a constraining function), but for *us* - as humans trying to design and reason about complex systems. The spec serves two masters: it constrains generation AND it clarifies your own thinking.
+
+Whether this pans out in practice is an empirical question. I'm speculating, not prescribing.
+
 ### X. Why No One Is Building This
 
 > **TL;DR:** The market optimizes for speed, satisfaction, and retention - not understanding, competence, or cognitive development. This misalignment is structural, not accidental. The tools that would actually help often hurt the metrics that companies care about.
@@ -530,6 +564,8 @@ The market can measure whether you clicked, how long you stayed, whether you cam
 
 This isn't a conspiracy. It's not that AI companies are evil. It's that the incentives point in the wrong direction. Companies are optimizing for what they can measure (engagement, satisfaction, retention), and what they can measure isn't what actually matters (understanding, capability, independence).
 
+**A clarification:** I'm not claiming that no market exists for capability-building tools. Education technology, professional certification, and enterprise training are real markets. The problem is where the *power* currently sits. The frontier model providers - the companies building the most capable models - are not profitable. They're burning cash and beholden to shareholders and growth metrics. The incentives at the top of the stack shape what gets built downstream.
+
 **The misalignment is structural, not accidental.** You can't expect market forces to fix this. The tools that would genuinely build capability are less engaging, less satisfying, and less sticky. They'll never win in a competitive market optimizing for engagement.
 
 If you want tools that actually help you think, you'll need to either build them yourself, configure existing tools against their defaults, or maintain discipline in how you use them. The market won't deliver them.
@@ -551,6 +587,8 @@ This creates predictable patterns:
 - Elaborate expansions on mediocre ideas instead of honest "this isn't ready yet"
 
 **The result:** AI defaults to validation instead of critique. Encouragement instead of challenge. Positive framing even when negative framing would be more honest.
+
+**To be clear:** My argument isn't about tone. AI can absolutely be encouraging, patient, and friendly - those are fine. The problem is the *interventions* it's inclined to make. You can make completely contradictory claims back to back and Claude will happily respond "You're absolutely right!" to both of them. When you're thinking about a problem incorrectly - whether based on an incomplete conceptual model or plainly falsifiable information - models are not inclined to engage in that conflict, even if the correction could be delivered in an encouraging, friendly, and patient tone.
 
 This is especially insidious because AI is validating your *words*, not your *situation*. It responds to what you said, not to what you actually need given your life, your goals, your constraints. A good mentor who knows you might say "this isn't the right time for that project" or "you're avoiding the harder problem." AI can't do that because it doesn't know your life. So it validates whatever direction you're heading, even when challenge would serve you better.
 
@@ -585,6 +623,8 @@ When AI generates code, you're not generating or transcribing - you're *reviewin
 - **Design:** Sketching options, even badly, builds spatial reasoning that reviewing AI-generated mockups doesn't.
 
 The pattern is the same: **there's knowledge in the doing that you can't get from the reviewing.**
+
+**An honest caveat:** This section is more intuition than proven claim. The handwriting research is specifically about *learning* and *retention* - it's not clear how well it generalizes to skilled practitioners who already have the procedural knowledge. Many excellent programmers work primarily through reading and reasoning, with typing as incidental. I find the kinesthetic dimension meaningful in my own experience, but I'd want to see more research before claiming it as universal. Your mileage may vary.
 
 AI-generated output gives you the artifact without the process. Sometimes that's fine - you have the knowledge already and just need the artifact. But when you're building skill, the process *is* the point.
 
@@ -623,6 +663,8 @@ The expert is using AI as a legitimate execution accelerator. The novice is usin
 The artifact exists. The capability doesn't. And the gap often isn't visible until something goes wrong.
 
 The deeper issue: experts have lived experience that tells them what they're building toward and why. They know their constraints, their goals, what tradeoffs make sense for their situation. They can evaluate whether AI's output actually serves their purposes. Novices are still building that context - they're still figuring out what good looks like, what matters, what they're even trying to accomplish. That's exactly when you need to be doing the work yourself, not outsourcing it.
+
+**A refinement of the heuristic:** The expert/novice framing is a simplification - real expertise exists on a spectrum. A more general principle: you should only delegate where the outputs are at a level of abstraction you can *reason about*, even if you can't verify every detail in a strict sense. If digesting the output requires as much effort as producing it yourself would have, you haven't gained anything. If you can't reason about the output at all - if you're just accepting it because it looks plausible - that's when you're creating false mastery.
 
 ### XIV. Document-Based Workflows: Conversations as Programs
 
@@ -820,7 +862,41 @@ If I'm asking for help with something I couldn't verify or evaluate without AI's
 
 This is the opposite of what default consumer AI gives you. It took me a while to realize I could even ask for this.
 
-### XVIII. Conclusion: Against the Current
+### XVIII. How This Essay Was Made
+
+> **TL;DR:** In the spirit of practicing what I preach, here's how this essay was actually produced - including extensive AI assistance. The process itself illustrates some of the limitations I'm describing.
+
+It would be hypocritical to write an essay about AI assistance without being transparent about how AI assisted in writing it. So here's the actual process:
+
+**What AI did:**
+- Served as a conversation partner for developing ideas over multiple sessions
+- Generated first drafts of sections based on our discussions
+- Helped organize and restructure the document as it evolved
+- Wrote a formal critique of the essay's arguments (at my request) that I then responded to
+- Made edits based on my responses to that critique
+
+**What I did:**
+- All the underlying thinking and lived experience these ideas came from
+- Decided which ideas mattered and how they connected
+- Evaluated every generated section and revised extensively
+- Pushed back when AI's framing didn't match my intent
+- Made all structural decisions about what to include, cut, or reorganize
+- Wrote the critique responses that then got woven back in
+
+**What this illustrates:**
+- I was operating within my competence boundary throughout - these are ideas I've been thinking about for months, and I could evaluate whether AI's outputs matched my intent
+- AI functioned as a reasoning tool (conversation partner, critic) and execution accelerator (drafting, editing), matching the two modes I describe
+- The chat interface created friction I describe - lots of back-and-forth, reviewing text I didn't write, iterating to match intent
+- Document-based workflows would have been better - being able to see the full text, make targeted edits, track changes over time
+
+**What I'm uncertain about:**
+- Whether someone reading this can tell which parts were "mine" vs "AI-generated" - and whether that distinction even makes sense given how intertwined the process was
+- Whether I would have developed these ideas differently without AI assistance, and what I might have missed or included as a result
+- Whether the process made me think more clearly or just produced text faster
+
+I'm sharing this because the essay argues for transparency about AI assistance and honest assessment of what's actually happening when we use these tools. It seemed wrong to make those arguments while obscuring my own process.
+
+### XIX. Conclusion: Against the Current
 
 > **TL;DR:** These ideas are counter-cultural because they're anti-market. But the market won't fix this. If you want AI tools that actually build capability rather than dependency, you'll need to configure them yourself, maintain discipline in how you use them, or build your own.
 
